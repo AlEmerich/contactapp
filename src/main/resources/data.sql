@@ -1,1 +1,0 @@
-INSERT INTO Contact VALUES(1, 'Alan', 'Guitard', 'guitard-alan@laposte.net');
