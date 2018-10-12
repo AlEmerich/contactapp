@@ -10,6 +10,11 @@ public class ContactDTO {
     private String lastName;
     private String mail;
 
+    public ContactDTO()
+    {
+        // empty
+    }
+
     public ContactDTO(String f, String l, String m)
     {
         this.firstName = f;

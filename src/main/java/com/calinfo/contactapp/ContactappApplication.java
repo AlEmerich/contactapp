@@ -24,9 +24,8 @@ public class ContactappApplication {
 	public CommandLineRunner loadData(ContactRepository repository)
 	{
 		return args -> {
-			SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken("user", "user", new ArrayList<>()));
-			String current = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-			System.out.println(current);
+			//String current = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+			//System.out.println(current);
 			//repository.save(new Contact("Alan", "Guitard", "guitard-alan@laposte.net",current));
 		};
 	}
