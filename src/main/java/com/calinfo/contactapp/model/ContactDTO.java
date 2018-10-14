@@ -6,6 +6,7 @@ import lombok.Setter;
 @Getter @Setter
 public class ContactDTO {
 
+    private long id;
     private String firstName;
     private String lastName;
     private String mail;
@@ -15,8 +16,9 @@ public class ContactDTO {
         // empty
     }
 
-    public ContactDTO(String f, String l, String m)
+    public ContactDTO(long id, String f, String l, String m)
     {
+        this.id = id;
         this.firstName = f;
         this.lastName = l;
         this.mail = m;
