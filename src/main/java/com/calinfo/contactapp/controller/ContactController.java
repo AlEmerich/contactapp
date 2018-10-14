@@ -67,7 +67,7 @@ public class ContactController
     {
         Optional<Contact> c = repository.findById(id);
         if(!c.isPresent())
-            throw new ObjectNotFoundException(c.get(), "No contact with id " + id);
+            throw new ObjectNotFoundException(null, "No contact with id " + id);
         return new ContactDTO(c.get().getId(), c.get().getFirstName(), c.get().getLastName(), c.get().getMail());
     }
 
