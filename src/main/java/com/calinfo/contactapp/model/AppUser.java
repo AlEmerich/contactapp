@@ -4,11 +4,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Set;
 
 @Entity
 @Getter @Setter
-public class User {
+public class AppUser implements Serializable {
 
     @Id
     @GeneratedValue
@@ -18,9 +19,9 @@ public class User {
 
     private String password;
 
-    public User(){}
+    public AppUser(){}
 
-    public User(String u, String p)
+    public AppUser(String u, String p)
     {
         this.username = u;
         this.password = p;
