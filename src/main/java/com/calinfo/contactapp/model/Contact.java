@@ -17,27 +17,28 @@ public class Contact implements java.io.Serializable
     private @NonNull String lastName;
     private @NonNull String mail;
 
-//    @ManyToOne
-//    @JoinColumn(name = "user_id")
-//    private @NonNull User owner;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private @NonNull AppUser owner;
 
     public Contact()
     {
         // empty
     }
 
-    public Contact(String firstName, String lastName, String mail)
+    public Contact(String firstName, String lastName, String mail, AppUser owner)
     {
         this.firstName = firstName;
         this.lastName = lastName;
         this.mail = mail;
-//        this.owner = owner;
+        this.owner = owner;
     }
 
-    public void setDTO(ContactDTO dto)
+    public void setDTO(ContactDTO dto, AppUser owner)
     {
         this.firstName = dto.getFirstName();
         this.lastName = dto.getLastName();
         this.mail = dto.getMail();
+        this.owner = owner;
     }
 }
