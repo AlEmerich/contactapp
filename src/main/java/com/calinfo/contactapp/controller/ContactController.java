@@ -88,7 +88,7 @@ public class ContactController
         return contactDTO;
     }
 
-    @PutMapping()
+    @PutMapping(params = "id")
     public @ResponseBody ResponseEntity<Object> updateContact(
             @RequestBody ContactDTO contactDTO,
             @RequestParam("id") long id)

@@ -36,13 +36,13 @@ public class ContactappApplication {
 		};
 	}
 
-//	@Bean
-//	public CommandLineRunner loadData(ContactRepository repository, UserRepository userRepository)
-//	{
-//		return args -> {
-//			//String current = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//			//System.out.println(current);
-//			repository.save(new Contact("Alan", "Guitard", "guitard-alan@laposte.net"));
-//		};
-//	}
+	@Bean
+	public CommandLineRunner loadData(ContactRepository repository, UserRepository userRepository)
+	{
+		return args -> {
+			//String current = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+			//System.out.println(current);
+			//userRepository.save(new AppUser("user", "password"));
+		};
+	}
 }
